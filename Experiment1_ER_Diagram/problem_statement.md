@@ -45,16 +45,17 @@ Design a database for patient management, appointments, medical records, and bil
    - Why you chose the entities and relationships.
    - How you modeled prerequisites or billing.
 
-# ER Diagram Submission - Student Name
+# ER Diagram Submission - Priyadharshika L
 
 ## Scenario Chosen
-Hospital (choose one)
+Hospital database
 
 ## ER Diagram:
 ![Screenshot 2025-04-28 141534](https://github.com/user-attachments/assets/eedd26dd-6677-4757-8ef2-10d773f5f320)
 
 
 ## Entities and Attributes:
+
 Patient: Patient_ID (implicitly needed), Fullname, DOB, Address, Phone_No, Insurance_Details, Email
 
 Doctor: Doctor_ID, Fullname, Specialization, Work_Schedule
@@ -66,6 +67,7 @@ Medical_Records: Record_ID, Patient_ID, Doctor_ID, Prescribed_Medicine, Diagnose
 Department: Dept_ID, Dept_Name, Dept_Head
 
 ## Relationships and Constraints:
+
 TREATS (Doctor → Patient) (Cardinality: Many-to-Many, Participation: Partial)
 
 HAVE (Patient/Doctor → Medical_Records) (Cardinality: One-to-Many, Participation: Total for Medical_Records)
