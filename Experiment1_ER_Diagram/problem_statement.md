@@ -77,11 +77,5 @@ HAVE (Doctor/Patient → Appointment) (Cardinality: One-to-Many, Participation: 
 ASSIGNED_TO (Doctor → Department) (Cardinality: Many-to-One, Participation: Partial)
 
 
-
-## Extension (Prerequisite / Billing):
-- Explain how you modeled prerequisites or billing.
-
-## Design Choices:
-Brief explanation of why you chose certain entities, relationships, and assumptions
-
-## RESULT
+## RESULT:
+The hospital database ER diagram models patients, doctors, appointments, medical records, and departments with their attributes and relationships. It captures key interactions like treatments, appointments, and departmental assignments clearly and efficiently.
