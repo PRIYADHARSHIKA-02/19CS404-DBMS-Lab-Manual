@@ -91,48 +91,6 @@ Write a SQL query to find the number of employees whose age is greater than 32.
 
 Sample table: employee
 
-id
-
-name
-
-age
-
-address
-
-salary
-
-1
-
-Paul
-
-32
-
-California
-
-20000
-
-4
-
-Mark
-
-25
-
-Richtown
-
-65000
-
-5
-
-David
-
-27
-
-Texas
-
-85000
-
-
-
 ```sql
 select COUNT(*) as COUNT from employee where age > 32;
 ```
@@ -199,48 +157,6 @@ LIMIT 1;
 Write a SQL query to find the number of employees who are having the same age removing the duplicate values.
 
 Sample table: employee
-
-id
-
-name
-
-age
-
-address
-
-salary
-
-1
-
-Paul
-
-32
-
-California
-
-20000
-
-4
-
-Mark
-
-25
-
-Richtown
-
-65000
-
-5
-
-David
-
-27
-
-Texas
-
-85000
-
-
 
 ```sql
 SELECT COUNT(DISTINCT age) as COUNT FROM employee;
