@@ -122,116 +122,179 @@ Amount REAL CHECK (Amount > 0)
 ```
 
 **Output:**
+![Screenshot 2025-04-28 144215](https://github.com/user-attachments/assets/160a25e6-61cc-4476-aadf-9c604367bfc6)
 
-![Output1](output.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write an SQL command can to add a column named email of type TEXT to the customers table
 
 ```sql
--- Paste your SQL code below for Question 2
+ALTER TABLE Customers ADD COLUMN email TEXT;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![Screenshot 2025-04-28 144448](https://github.com/user-attachments/assets/196ac254-4e63-4871-8c1b-650dfbddfe48)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+Create a table named Reviews with the following columns:
+
+ReviewID as INTEGER
+ProductID as INTEGER
+Rating as REAL
+ReviewText as TEXT
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Reviews(
+ReviewID INTEGER,
+ProductID INTEGER,
+Rating REAL,
+ReviewText TEXT
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+![Screenshot 2025-04-28 144655](https://github.com/user-attachments/assets/239db912-cbe0-4793-8fad-63e105d73003)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+Insert the below data into the Student_details table, allowing the Subject and MARKS columns to take their default values.
 
 ```sql
--- Paste your SQL code below for Question 4
+INSERT INTO Student_details(RollNo, Name, Gender)
+VALUES(204,'Samuel Black','M');
 ```
 
 **Output:**
 
-![Output4](output.png)
+![Screenshot 2025-05-05 132850](https://github.com/user-attachments/assets/7e7fb804-af68-4bc2-902a-6acb58000463)
+
 
 **Question 5**
----
--- Paste Question 5 here
+---Write an SQL Query to add the attributes designation, net_salary, and dob to the Companies table with the following data types:
+designation as VARCHAR(50)
+net_salary as NUMBER
+dob as DATE
 
 ```sql
--- Paste your SQL code below for Question 5
+ALTER TABLE Companies ADD COLUMN designation  varchar(50);
+ALTER TABLE Companies ADD COLUMN net_salary  number;
+ALTER TABLE Companies ADD COLUMN dob  date;
 ```
 
 **Output:**
+![Screenshot 2025-05-05 133025](https://github.com/user-attachments/assets/9340132f-fc02-4f67-945d-2d5c7ad0bf73)
 
-![Output5](output.png)
 
 **Question 6**
 ---
--- Paste Question 6 here
+Create a table named Shipments with the following constraints:
+ShipmentID as INTEGER should be the primary key.
+ShipmentDate as DATE.
+SupplierID as INTEGER should be a foreign key referencing Suppliers(SupplierID).
+OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
 
 ```sql
--- Paste your SQL code below for Question 6
+CREATE TABLE Shipments(
+ShipmentID INTEGER PRIMARY KEY,
+ShipmentDate DATE,
+SupplierID INTEGER,
+OrderID INTEGER,
+FOREIGN KEY(SupplierID) REFERENCES Suppliers(SupplierID),
+FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+
+);
 ```
 
 **Output:**
 
-![Output6](output.png)
+![Screenshot 2025-05-05 133153](https://github.com/user-attachments/assets/77f8e7de-ce3f-4d43-862e-5d24244f4a4e)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+Create a table named Department with the following constraints:
+DepartmentID as INTEGER should be the primary key.
+DepartmentName as TEXT should be unique and not NULL.
+Location as TEXT.
 
 ```sql
--- Paste your SQL code below for Question 7
+CREATE TABLE Department(
+DepartmentID INTEGER PRIMARY KEY,
+DepartmentName TEXT UNIQUE NOT NULL,
+Location TEXT
+);
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+![Screenshot 2025-05-05 133333](https://github.com/user-attachments/assets/0451ce42-362c-470b-9799-5935ab7cb312)
 
 **Question 8**
 ---
--- Paste Question 8 here
+Write an SQL Query to add the attributes designation, net_salary, and dob to the Companies table with the following data types:
+designation as VARCHAR(50)
+net_salary as NUMBER
+dob as DATE
 
 ```sql
--- Paste your SQL code below for Question 8
+ALTER TABLE Companies ADD COLUMN designation  varchar(50);
+ALTER TABLE Companies ADD COLUMN net_salary  number;
+ALTER TABLE Companies ADD COLUMN dob  date;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![Screenshot 2025-05-05 133714](https://github.com/user-attachments/assets/3ae86a8c-d6c0-4d7f-9001-98e06bf91001)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+Create a table named Orders with the following columns:
+
+OrderID as INTEGER
+OrderDate as TEXT
+CustomerID as INTEGER
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE Orders(
+OrderID INTEGER,
+OrderDate TEXT,
+CustomerID INTEGER
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![111](https://github.com/user-attachments/assets/340f2aae-8265-482b-b065-2341c0a75c43)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+Create a table named Products with the following constraints:
+ProductID as INTEGER should be the primary key.
+ProductName as TEXT should be unique and not NULL.
+Price as REAL should be greater than 0.
+StockQuantity as INTEGER should be non-negative.
 
-```sql
--- Paste your SQL code below for Question 10
+```sqlCREATE TABLE Products(
+ProductID INTEGER PRIMARY KEY,
+ProductName TEXT UNIQUE NOT NULL,
+Price REAL CHECK(Price>1),
+StockQuantity INTEGER CHECK(StockQuantity>=1)
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+![Uploading 122.jpg…]()
+
 
 
 ## RESULT
