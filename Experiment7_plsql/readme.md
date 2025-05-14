@@ -35,10 +35,13 @@ END;
 - Display the greater number using `DBMS_OUTPUT.PUT_LINE`.
 
 **CODE**
+
 DECLARE
+
     num1 NUMBER := 80;
     num2 NUMBER := 45;
 BEGIN
+
     IF num1 > num2 THEN
         DBMS_OUTPUT.PUT_LINE('Greater number is: ' || num1);
     ELSE
@@ -65,10 +68,12 @@ Greater number is: 80
 
 **CODE**
 DECLARE
+
     n NUMBER := 10;
     i NUMBER := 1;
     sum NUMBER := 0;
 BEGIN
+
     WHILE i <= n LOOP
         sum := sum + i;
         i := i + 1;
@@ -94,12 +99,14 @@ Sum of first 10 natural numbers is: 55
 
 **CODE**
 DECLARE
+
     n NUMBER := 7;
     a NUMBER := 0;
     b NUMBER := 1;
     c NUMBER;
     i NUMBER := 3; -- starting from the 3rd term
 BEGIN
+
     DBMS_OUTPUT.PUT_LINE('Fibonacci sequence:');
     DBMS_OUTPUT.PUT_LINE(a);
     DBMS_OUTPUT.PUT_LINE(b);
@@ -131,11 +138,13 @@ Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
 
 **CODE**
 DECLARE
+
     n NUMBER := 1535;
     rem NUMBER;
     rev NUMBER := 0;
     original NUMBER := 1535;
 BEGIN
+
     WHILE n > 0 LOOP
         rem := MOD(n, 10);       -- Get the last digit
         rev := (rev * 10) + rem; -- Build the reversed number
@@ -160,12 +169,15 @@ Reversed number is 5351
 - Use nested `IF-ELSIF-ELSE` conditions to find the largest among the three.
 - Display the largest number.
 **CODE**
+  
 DECLARE
+
     a NUMBER := 10;
     b NUMBER := 9;
     c NUMBER := 15;
     largest NUMBER;
 BEGIN
+
     IF a >= b AND a >= c THEN
         largest := a;
     ELSIF b >= a AND b >= c THEN
@@ -173,7 +185,7 @@ BEGIN
     ELSE
         largest := c;
     END IF;
-
+  
     DBMS_OUTPUT.PUT_LINE('Largest of three number is ' || largest);
 END;
 
